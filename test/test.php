@@ -1,2 +1,3 @@
 <?php
-echo "Mon premier script 2";
+$nom = "Fatou";
+echo "Bonjour, $nom bienvenue sur notre site.";
