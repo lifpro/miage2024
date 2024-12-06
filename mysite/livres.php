@@ -11,7 +11,7 @@
 <body>
     <?php include "header.php" ?>
     <main>
-        <p>Bienvenue</p>
+        <p>Nos livres</p>
 
     </main>
     <?php include "footer.php" ?>
