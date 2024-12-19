@@ -9,9 +9,20 @@
 </head>
 
 <body>
-    <?php include "header.php" ?>
+    <?php session_start();
+    include "header.php" ?>
     <main>
         <p>Nos livres</p>
+        <?php
+        $fic = fopen('livres.txt', 'r');
+        if ($fic) {
+            while (($ligne = fgets($fic)) !== false) {
+                echo $ligne . '<br>';
+            }
+        }
+
+
+        ?>
 
     </main>
     <?php include "footer.php" ?>

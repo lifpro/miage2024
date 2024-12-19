@@ -9,9 +9,19 @@
 </head>
 
 <body>
-    <?php include "header.php" ?>
+    <?php session_start();
+    include "header.php" ?>
     <main>
         <p>Bienvenue</p>
+        <?php
+
+
+        $patronyme = 'MOUSSA';
+
+        $_SESSION['eleve'] = $patronyme;
+        //setcookie('name', $patronyme, time() + 3600);
+
+        ?>
 
     </main>
     <?php include "footer.php" ?>
