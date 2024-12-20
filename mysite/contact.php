@@ -12,18 +12,36 @@
     <?php include "header.php" ?>
     <main>
         <p>Formulaire de contact</p>
-        <form action="contactValidation.php" method="POST">
-            <label for="nom">Nom : </label>
-            <input type="text" id="nom" name="nom" required />
-            <label for="email">Email : </label>
-            <input type="email" id="email" name="email" required />
-            </br></br>
-            <label for="message">Message : </label>
-            <textarea id="message" name="message" required></textarea>
-            </br></br>
-            <label><input type="checkbox" name="newsletter" value="oui" />S'inscrire à la newsletter</label>
-            </br></br>
-            <button type="submit">Envoyer</button>
+        <form action="contactValidation.php" method="POST" enctype="multipart/form-data">
+            <table>
+                <tr>
+                    <th> <label for="nom">Nom : </label></th>
+                    <td> <input type="text" id="nom" name="nom" required /></td>
+                </tr>
+                <tr>
+                    <th> <label for="email">Email : </label></th>
+                    <td> <input type="email" value="ysalissou@gmail.com" id="email" name="email" required /></td>
+                </tr>
+                <tr>
+                    <th><label for="message">Message : </label></th>
+                    <td><textarea id="message" name="message" required></textarea></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td><label><input type="checkbox" name="newsletter" value="oui" />S'inscrire à la newsletter</label></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td><input type="file" id="cv" name="cv" /></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td>
+                        <button type="submit">Envoyer</button>
+                    </td>
+                </tr>
+
+            </table>
         </form>
     </main>
     <?php include "footer.php" ?>

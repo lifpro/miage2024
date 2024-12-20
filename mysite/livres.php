@@ -19,6 +19,7 @@
             while (($ligne = fgets($fic)) !== false) {
                 echo $ligne . '<br>';
             }
+            fclose($fic);
         }
 
 
